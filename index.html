@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<style>
+		.image-div {
+			width: 800px;
+			justify-content: center;
+			display: flex;
+		}
+		.slider-image {
+			height: 400px;
+		}
+		.slider-container {
+			width: 800px;
+			height: 400px;
+			background-color: yellow;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 0px;
+			overflow: hidden;
+		}
+
+		.image-container {
+			width: 2400px;
+			background-color: red;
+			height: 400px;
+			clear: both;
+			position: relative;
+			display: flex;
+			-webkit-transition: left 2s;
+			-moz-transition: left 2s;
+			-o-transition: left 2s;
+			transition: left 2s;
+		}
+
+		#slider-image-1:target~.image-container {
+			left: 0px;
+		}
+
+		#slider-image-2:target~.image-container {
+			left: -800px;
+		}
+
+		#slider-image-3:target~.image-container {
+			left: -1600px;
+		}
+
+		.button-container {
+			width: 800px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.slider-change {
+			color: white;
+			text-decoration: none;
+			display: inline-block;
+			height: 1rem;
+			width: 1rem;
+			border-radius: 5px;
+			background-color: brown;
+			padding: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 5px 5px;
+		}
+
+		.container {
+			display: grid;
+			grid-row: auto;
+			width: 100%;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="slider-container">
+			<span id="slider-image-1"></span>
+			<span id="slider-image-2"></span>
+			<span id="slider-image-3"></span>
+			<div class="image-container">
+				<div class="image-div">
+					<img src="https://s1.kaercher-media.com/products/10573280/main/1/d0.jpg" class="slider-image" />
+				</div>
+				<div class="image-div">
+					<img src="https://media.lineonline.it/catalog/product/cache/1/image/500x/9df78eab33525d08d6e5fb8d27136e95/c/o/computer-48-2_1.jpg" class="slider-image" />
+				</div>
+				<div class="image-div">
+					<img src="https://media.lineonline.it/catalog/product/cache/1/image/500x/9df78eab33525d08d6e5fb8d27136e95/c/o/computer-48-2_1.jpg" class="slider-image" />
+				</div>
+			</div>
+		</div>
+		<div class="button-container">
+			<a href="#slider-image-1" class="slider-change">1</a>
+			<a href="#slider-image-2" class="slider-change">2</a>
+			<a href="#slider-image-3" class="slider-change">3</a>
+		</div>
+	</div>
+</body>
+	
+</html>
