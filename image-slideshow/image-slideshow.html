@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
+	<!-- Image Slideshow HTML Snippet -->
+	<!-- You can found the live demonstration of that script here:  -->
+	<!-- https://html-snippets.andreagennaioli.com/image-slideshow/image-slideshow.html -->
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	<title>Image Slideshow | HTML Snippets</title>
 	<style>
 		.image {
 			width: 800px;
@@ -114,25 +118,28 @@
 		</div>
 	</div>
 	<script>
-		let automatic_scroll = true;
-		let automatic_scroll_timeout = 10000;
-
+		// Here the variables for personalization
+		let automatic_scroll = true; // Change this to true or false to activate or disable automatic scroll of the images.
+		let automatic_scroll_timeout = 10000; // Change this to change the timeout between one image and the others { 10000 -> 10s }.
+		let numeric_slide_buttons = true; // Change this to true or false to activate or disable the numeric slides' buttons.
 		window.onload = () => {
 			let isScrollable = automatic_scroll;
 
 			let images = document.querySelectorAll('.image').length;
 			document.querySelector('.image-container').style['width'] = images * 800+'px';
-			for (let i = 1; i < images + 1; i++) {
-				document.querySelector('.button-container').innerHTML +=
-					`<a id="slider-change-${i}" class="slider-change">${i}</a>`;
-				document.addEventListener('click', (e) => {
-					if (e.target && e.target.id == `slider-change-${i}`) {
-						console.log(i)
-						console.log(i > 1 ? '-' + ((i - 1) * 800).toString() + 'px' : '0px')
-						document.querySelector('.image-container').style['left'] = i > 1 ? '-' + ((i - 1) * 800)
-							.toString() + 'px' : '0px';
-					}
-				});
+			if(numeric_slide_buttons) {
+				for (let i = 1; i < images + 1; i++) {
+					document.querySelector('.button-container').innerHTML +=
+						`<a id="slider-change-${i}" class="slider-change">${i}</a>`;
+					document.addEventListener('click', (e) => {
+						if (e.target && e.target.id == `slider-change-${i}`) {
+							console.log(i)
+							console.log(i > 1 ? '-' + ((i - 1) * 800).toString() + 'px' : '0px')
+							document.querySelector('.image-container').style['left'] = i > 1 ? '-' + ((i - 1) * 800)
+								.toString() + 'px' : '0px';
+						}
+					});
+				}
 			}
 
 			if (automatic_scroll) {
@@ -174,6 +181,8 @@
 			});
 		}
 	</script>
+
+	<!--  -->
 </body>
 
 </html>
