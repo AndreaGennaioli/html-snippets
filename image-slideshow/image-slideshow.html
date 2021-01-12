@@ -6,10 +6,18 @@
 	<!-- You can found the live demonstration of that script here:  -->
 	<!-- https://html-snippets.andreagennaioli.com/image-slideshow/image-slideshow.html -->
 
+	<!-- This Script is dynamic and the only thing you need to do is add yours images at line 97 using this scheme:
+		<div class="image">
+			<img src="..." class="slider-image" />
+		</div>
+	-->
+	<!-- To personalize the slideshow go at line 120 -->
+	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Image Slideshow | HTML Snippets</title>
 	<style>
+		/* You can change the CSS like you want */
 		.image {
 			width: 800px;
 			justify-content: center;
@@ -91,6 +99,7 @@
 			<span id="slider-image-2"></span>
 			<span id="slider-image-3"></span>
 			<div class="image-container">
+				<!-- Insert Here your images: -->
 				<div class="image">
 					<img src="https://s1.kaercher-media.com/products/10573280/main/1/d0.jpg" class="slider-image" />
 				</div>
@@ -101,12 +110,7 @@
 				<div class="image">
 					<img src="https://www.deajunior.it/tmpl/imgu/gallery/5be5aac7532e2.jpg" class="slider-image" />
 				</div>
-				<div class="image">
-					<img src="https://www.deajunior.it/tmpl/imgu/gallery/5be5aac7532e2.jpg" class="slider-image" />
-				</div>
-				<div class="image">
-					<img src="https://www.deajunior.it/tmpl/imgu/gallery/5be5aac7532e2.jpg" class="slider-image" />
-				</div>
+				<!-- ... -->
 			</div>
 		</div>
 		<div class="bottom-container">
@@ -182,7 +186,8 @@
 		}
 	</script>
 
-	<!--  -->
+	<!-- by AndreaGennaioli (https://github.com/AndreaGennaioli) -->
+	<!-- Here others HTML snippets: https://github.com/AndreaGennaioli/html-snippets -->
 </body>
 
 </html>
